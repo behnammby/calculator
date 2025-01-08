@@ -17,8 +17,8 @@ export default function Calculator() {
       const evalInput = input
       .replace(/e\^/g, 'Math.E**')
       .replace(/\^/g, '**')
-      .replace(/ln\(/g, 'Math.log(')
       .replace(/log\(/g, 'Math.log10(')
+      .replace(/ln\(/g, 'Math.log(')
       .replace(/√\(/g, 'Math.sqrt(')
 
       console.log("----------");
