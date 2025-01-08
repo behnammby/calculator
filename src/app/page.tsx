@@ -14,13 +14,17 @@ export default function Calculator() {
   const calculate = () => {
     try {
       // Basic evaluation with Math for advanced operations
-      const evalResult = eval(input
-        .replace(/\^/g, '**')
-        .replace(/ln\(/g, 'Math.log(')
-        .replace(/log\(/g, 'Math.log10(')
-        .replace(/e\^/g, 'Math.exp(')
-        .replace(/√/g, 'Math.sqrt(')
-      );
+      const evalInput = input
+      .replace(/e\^/g, 'Math.E**')
+      .replace(/\^/g, '**')
+      .replace(/ln\(/g, 'Math.log(')
+      .replace(/log\(/g, 'Math.log10(')
+      .replace(/√\(/g, 'Math.sqrt(')
+
+      console.log("----------");
+      console.log(evalInput);
+
+      const evalResult = eval(evalInput);
 
       setResult(evalResult);
     } catch (err) {
